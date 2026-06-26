@@ -1,0 +1,12 @@
+{
+  "ticket_id": "TKT-001",
+  "case_type": "unauthorized_transaction",
+  "department": "fraud_risk",
+  "priority": "high",
+  "relevant_transaction_id": "TXN-9821",
+  "evidence_verdict": "consistent",
+  "confidence_score": 0.95,
+  "reasoning": "The customer's claim of an unauthorized $500 transfer to an unknown account aligns perfectly with the recent transaction TXN-9821 for $500.00 to 'Unknown Account'.",
+  "customer_reply": "We take unauthorized transactions very seriously. A fraud specialist is currently reviewing your account and investigating the $500 transfer. We will reach out shortly with an update. Please do not share any sensitive information such as passwords or PINs through this channel.",
+  "human_review_required": true
+}
