@@ -17,6 +17,15 @@ QueueStorm Investigator is designed to ingest customer complaints, autonomously 
 
 ---
 
+## 🌐 Live API Links
+
+The project is actively deployed on Render and ready for testing!
+
+- **Health Check Endpoint:** [https://queuestorm-investigator-rah6.onrender.com/health](https://queuestorm-investigator-rah6.onrender.com/health)
+- **Interactive Swagger Dashboard:** [https://queuestorm-investigator-rah6.onrender.com/docs](https://queuestorm-investigator-rah6.onrender.com/docs) *(Use this to manually test the API!)*
+
+---
+
 ## 🤖 MODELS & AI Approach
 
 For this investigator engine, we built a flexible, model-agnostic architecture, but we specifically chose **OpenAI's `gpt-4o-mini`** (or **Gemini 2.0 Flash**) as the core LLMs.
