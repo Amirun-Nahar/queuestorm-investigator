@@ -176,5 +176,14 @@ curl -X POST http://localhost:8000/analyze-ticket \
 
 ---
 
+## ⚠️ Known Limitations & Edge Cases
+
+While this investigator engine is highly robust, please note the following limitations:
+1. **Multilingual Support**: The system prompt is heavily optimized for English. Complaints submitted in other languages may suffer from lower confidence scores or misclassification depending on the LLM's translation capabilities.
+2. **Context Window Limits**: Extremely large transaction histories (e.g., thousands of rows for a commercial account) might exceed the context window or token limits. A pagination or pre-filtering microservice should be placed in front of this API for enterprise accounts.
+3. **Regex Hardcoding**: The post-processing safety shield relies on strict regex for banned words (e.g., "PIN", "OTP"). While extremely fast and completely deterministic, it may be overly aggressive and block legitimate words that contain those substrings if not carefully boundary-checked.
+
+---
+
 ## 📝 License
 This project is licensed under the MIT License.
