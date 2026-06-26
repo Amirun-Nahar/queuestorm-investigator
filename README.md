@@ -182,6 +182,7 @@ While this investigator engine is highly robust, please note the following limit
 1. **Multilingual Support**: The system prompt is heavily optimized for English. Complaints submitted in other languages may suffer from lower confidence scores or misclassification depending on the LLM's translation capabilities.
 2. **Context Window Limits**: Extremely large transaction histories (e.g., thousands of rows for a commercial account) might exceed the context window or token limits. A pagination or pre-filtering microservice should be placed in front of this API for enterprise accounts.
 3. **Regex Hardcoding**: The post-processing safety shield relies on strict regex for banned words (e.g., "PIN", "OTP"). While extremely fast and completely deterministic, it may be overly aggressive and block legitimate words that contain those substrings if not carefully boundary-checked.
+4. **API Quotas and Rate Limits**: Public API keys (especially free-tier OpenAI or Gemini accounts) often suffer from strict rate limiting or `0` quota restrictions, which will cause the API to throw `500 Internal Server Errors` during testing. To completely bypass this limitation during development and CI/CD pipelines, we engineered the `MOCK_AI=true` fallback mode to simulate 100% successful AI responses.
 
 ---
 
